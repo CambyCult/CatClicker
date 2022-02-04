@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src ="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Catcher</title>
+</head>
+<body>
+    <div class="game">
+        <div class="board">
+            
+            <div class="upgrades">
+                <button onclick="buyCatNet()" id="buyCatNet">Buy Cat Net.</button>
+                <button onclick="buyCatPheromones()" id="buyCatPheromones">Buy Cat Pheromones: 10 Cats </button>
+            </div>
+            <div class="catdisplay">
+                <p id="catsCaught">You have no cats.</p>
+
+                <button onclick="catchCat()">Catch a Cat</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

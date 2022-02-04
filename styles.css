@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    
+}
+
+.game{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#719eda;
+    
+}
+    .board{
+        display:flex;
+        flex-direction:column;
+        height:100vh;
+        width:100vw;
+        text-align:center;
+        align-items:center;
+        background-color:#bf7070;
+        border:2px solid #490b0b;
+    }
+        .board button{
+            width:150px;
+            background-color:#bf7070;
+        }
+    .catdisplay{
+        position:fixed;
+        bottom: 0;
+        left: 0;
+        height:20vh;
+        width:100vw;
+        background-color:#490b0b;
+        color:#bf7070;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+    }
+        .catdisplay p{
+            margin-bottom:10px;
+        }
+        .catdisplay button{
+            border-radius:50%;
+            height:10vh;
+            width:10vh;
+        }
+        
+    .upgrades{
+        display:flex;
+        flex-direction:column-reverse;
+        gap:5px;
+        height:80vh;
+        width:100vw;
+    }
+        .upgrades button{
+            align-self:center;
+            background-color:#490b0b;
+            color:#bf7070;
+            height:40vw;
+            width:40vw;
+            border-radius:5%;
+        }
