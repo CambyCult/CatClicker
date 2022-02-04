@@ -1,8 +1,11 @@
 var gameData = {
     cats:0,
     catsPerClick:0,
-    firstUpgradeCost: 10
+    firstUpgradeCost: 10,
+    secondUpgradeCost: 100
 }
+
+var upgradeLevels = [1, 1];
 
 function catchCat(){
     gameData.cats += gameData.catsPerClick;
@@ -24,8 +27,20 @@ function buyCatPheromones(){
         gameData.cats -= gameData.firstUpgradeCost
         gameData.catsPerClick += 1
         gameData.firstUpgradeCost *= 2
+        upgradeLevels[0] += 1,
         document.getElementById("catsCaught").innerHTML = gameData.cats + " Cats Caught"
-        document.getElementById("buyCatPheromones").innerHTML = "Upgrade Cat Pheromones (Current Level " + gameData.catsPerClick + ") Cost: " + gameData.firstUpgradeCost + " Cats"
+        document.getElementById("buyCatPheromones").innerHTML = "Upgrade Cat Pheromones (Level " + upgradeLevels[0] + ") Cost: " + gameData.firstUpgradeCost + " Cats"
+    }
+}
+
+function buyFeatherWand(){
+
+    if( gameData.cats >= gameData.secondUpgradeCost) {
+        gameData.cats -= gameData.secondUpgradeCost
+        gameData.catsPerClick += 10
+        gameData.secondUpgradeCost *= 2
+        upgradeLevels[1] += 1,
+        document.getElementById("buyFeatherWand").innerHTML = "Upgrade Feather Wand (Level: " + upgradeLevels[1] + ") Cost: " + gameData.secondUpgradeCost + " Cats"
     }
 }
 
@@ -39,7 +54,7 @@ var saveGameLoop = window.setInterval(function() {
     localStorage.setItem("catCatcherSave", JSON.stringify(gameData))
     }, 15000)
 
-var savegame = JSON.parse(localStorage.getItem("catCAtcherSave"))
+var savegame = JSON.parse(localStorage.getItem("catCatcherSave"))
     if (savegame !== null) {
         gameData = savegame
     }
