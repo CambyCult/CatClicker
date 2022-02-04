@@ -57,18 +57,26 @@
         }
         
     .upgrades{
+        position:absolute;
+        top:0;
+        left:0;
         display:flex;
         flex-direction:column-reverse;
+        background-image:url("images/catbutt.png");
+        background-repeat:no-repeat;
+        background-position:fixed;
+        background-position-y:12vh;
+        float:right;
+        columns:2;
         gap:5px;
         height:80vh;
         width:100vw;
     }
         .upgrades button{
-            align-self:center;
             background-color:#490b0b;
             color:#bf7070;
-            height:40vw;
-            width:40vw;
+            height:30vw;
+            width:30vw;
             border-radius:5%;
             z-index:5;
         }

@@ -40,7 +40,7 @@ function buyFeatherWand(){
         gameData.catsPerClick += 10
         gameData.secondUpgradeCost *= 2
         upgradeLevels[1] += 1,
-        document.getElementById("buyFeatherWand").innerHTML = "Upgrade Feather Wand (Level: " + upgradeLevels[1] + ") Cost: " + gameData.secondUpgradeCost + " Cats"
+        document.getElementById("buyFeatherWand").innerHTML = "Upgrade Feather Wand (Level " + upgradeLevels[1] + ") Cost: " + gameData.secondUpgradeCost + " Cats"
     }
 }
 
