@@ -16,8 +16,9 @@ function catchCat(){
 
 
 function showHide() {
-    var x = document.getElementById("shopMenu")
-    if (x.style.visibility = "hidden"){
+    var x = document.getElementById("shopMenu");
+    console.log(x, x.style.visibility);
+    if (x.style.visibility !== "visible"){
         x.style.visibility = "visible"
         } else {
             x.style.visibility = "hidden"}
@@ -39,7 +40,7 @@ function showHide() {
                 gameData.catsPerClick += 1
                 gameData.firstUpgradeCost *= 2
                 upgradeLevels[0] += 1,
-                document.getElementById("catsCaught").innerHTML = "You have " + gameData.cats + " Cats"
+                document.getElementById("catsCaught").innerHTML = "You have " + Math.trunc(gameData.cats) + " Cats"
                 document.getElementById("buyCatPheromones").innerHTML = "Upgrade Cat Pheromones (Level " + upgradeLevels[0] + ") Cost: " + gameData.firstUpgradeCost + " Cats"
             }
         }

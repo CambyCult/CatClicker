@@ -23,8 +23,23 @@
             left:0;
             height:20vh;
             width:100vw;
+            display:flex;
+            justify-content:center;
+            align-items:center;
         }
+            .navigateButtons button{
+                height:10vh;
+                width:50vw;
+                font-size:4vh;
+                background-color:#3a250d;
+                color:#7e6549;
+                border: 1px solid #3a250d;
+            }
+
     .upgrades{
+        background-image:url("images/catbutt.png");
+        background-size:contain;
+        background-repeat:no-repeat;
         height:40vh;
         width:100vw;
     }
@@ -37,12 +52,18 @@
             height:40vh;
             width:100vw;
             z-index:6;
+            gap:3vh;
         }
             .shopMenu button{
                 height:10vh;
                 width:40vw;
+                border-radius:10%;
+                font-size:2vh;
+                background-color:#3a250d;
+                color:#7e6549;
+                border: 1px solid #3a250d;
             }
-            
+
         .catchCatsMenu{
             display:flex;
             flex-direction:column-reverse;
@@ -55,12 +76,17 @@
             width:100vw;
             line-height:10vh;
             z-index:5;
+            color:#0b2649;
+            
+            font-size:2rem;
         }
         .catchCatsMenu button{
             height:10vh;
             width:10vh;
             border: 5px solid black;
             border-radius:50%;
+            background-color:#4d1414;
+            color:#bf7084;
         }
     
 
