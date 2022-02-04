@@ -1,6 +1,6 @@
 *{
     margin:0;
-    
+    overflow:hidden;
 }
 
 .game{
@@ -12,7 +12,62 @@
     background:#719eda;
     
 }
-    .board{
+    .game{
+        height:100vh;
+        width:100vw;
+        display:flex;
+    }
+        .navigateButtons{
+            position:absolute;
+            top:0;
+            left:0;
+            height:20vh;
+            width:100vw;
+        }
+    .upgrades{
+        height:40vh;
+        width:100vw;
+    }
+
+        .shopMenu{
+            visibility:hidden;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            height:40vh;
+            width:100vw;
+            z-index:6;
+        }
+            .shopMenu button{
+                height:10vh;
+                width:40vw;
+            }
+            
+        .catchCatsMenu{
+            display:flex;
+            flex-direction:column-reverse;
+            align-items:center;
+            position:fixed;
+            bottom:0;
+            left:0;
+            display:flex;
+            height:40vh;
+            width:100vw;
+            line-height:10vh;
+            z-index:5;
+        }
+        .catchCatsMenu button{
+            height:10vh;
+            width:10vh;
+            border: 5px solid black;
+            border-radius:50%;
+        }
+    
+
+
+
+
+/*.board{
         display:flex;
         flex-direction:column;
         height:100vh;
@@ -68,7 +123,7 @@
         background-position-y:12vh;
         float:right;
         columns:2;
-        gap:5px;
+       
         height:80vh;
         width:100vw;
     }
@@ -87,4 +142,4 @@
             height:50vh;
             width:auto;
             z-index:1;
-        }
+        } */

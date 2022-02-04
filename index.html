@@ -11,18 +11,25 @@
 <body>
     <div class="game">
         <div class="board">
+            <div class="navigateButtons" id="navigateButtons">
+                <button onclick="showHide()">Go to Shop</button>
+            </div>
+            
             
             <div class="upgrades">
-                
-                <button onclick="buyCatNet()" id="buyCatNet">Buy Cat Net.</button>
-                <button onclick="buyCatPheromones()" id="buyCatPheromones">Buy Cat Pheromones (Level 1) CosT: 10 Cats</button>
-                <button onclick="buyFeatherWand()" id="buyFeatherWand">Buy Feather Wand (Level 1) Cost: 100 Cats</button>
+                <div class="shopMenu" id="shopMenu">
+                    <button onclick="buyCatNet()" id="buyCatNet">Pickup Cat Net.</button>
+                    <button onclick="buyCatPheromones()" id="buyCatPheromones"></button>
+                    <button onclick="buyFeatherWand()" id="buyFeatherWand"></button>
+                </div>
             </div>
+        
             <div class="catdisplay">
-                <p id="catsCaught"></p>
-                
-                <button onclick="catchCat()">Catch a Cat</button>
-            </div>
+                <div class="catchCatsMenu" id="catchCatsMenu">
+                    <button onclick="catchCat()">Catch a Cat</button>
+                    <p id="catsCaught"></p>
+                </div>
+            </div>     
         </div>
     </div>
 </body>
